@@ -24,7 +24,7 @@ node {
     }
     stage ('Complie-Package') {
     	def MVN_HOME = tool name: 'Maven', type: 'maven'
-    	sh "${MVN_HOME}/bin/mvn package"
+    	call "${MVN_HOME}/bin/mvn clean install -U -DskipTests"
     }
 }
  
