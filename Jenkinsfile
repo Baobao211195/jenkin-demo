@@ -1,8 +1,4 @@
 node {
-	tools {
-        maven 'Maven'
-        jdk 'Java8'
-    }
 	stage('Checkout') {
        checkout(
        		[$class: 'GitSCM',
