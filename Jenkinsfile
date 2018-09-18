@@ -27,14 +27,8 @@ node {
        )
     }
     stage ('Build') {
-    	 sh '''
-	            echo "PATH = ${PATH}"
-	            echo "M2_HOME = ${M2_HOME}"
-        	'''
-    	 steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true install' 
-            }
-            
+    	def MAVEN_HOME = tool name: 'Maven', type: 'maven'
+        sh "${MAVEN_HOME}/bin/mvn clean install" 
      }       
 }
  
