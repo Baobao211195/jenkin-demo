@@ -1,4 +1,8 @@
 node {
+	tools {
+        maven 'Maven'
+        jdk 'Java8'
+    }
 	stage('Checkout') {
        checkout(
        		[$class: 'GitSCM',
@@ -22,9 +26,14 @@ node {
        		 ]
        )
     }
-    stage ('Complie-Package') {
-    	def MVN_HOME = tool name: 'Maven', type: 'maven'
-    	call "${MVN_HOME}/bin/mvn clean install -U -DskipTests"
+    stage ('Build') {
+    	 sh '''
+	            echo "PATH = ${PATH}"
+	            echo "M2_HOME = ${M2_HOME}"
+        	'''
+    	 steps {
+                sh 'mvn -Dmaven.test.failure.ignore=true install' 
+            }
     }
 }
  
