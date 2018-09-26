@@ -40,7 +40,7 @@
 <!-- 			<artifactId>spring-boot-starter-amqp</artifactId> -->
 <!-- 		</dependency> -->
 	</dependencies>
-
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -49,4 +49,18 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<distributionManagement>
+		<repository>
+			<id>libs-release-local</id>
+			<name>jenkins-demo Repository-releases</name>
+			<url>http://localhost:8081/artifactory/libs-release-local/</url>
+		</repository>
+		<snapshotRepository>
+			<id>libs-snapshot-local</id>
+			<name>jenkins-demo Repository-releases</name>
+			<url>http://localhost:8081/artifactory/libs-snapshot-local/</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
 </project>
