@@ -24,8 +24,10 @@ node {
     }
     stage ('Build') {
     	def mvnHome = tool name: 'Maven', type: 'maven'
-        bat '${mvnHome}\bin\mvn package'
-	    bat 'echo step1'
+    	echo "Display : ${mvnHome}"
+    	bat 'echo step1'
+        bat '${mvnHome}\\bin\\mvn package'
+	    
      }       
 }
  
