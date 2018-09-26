@@ -19,9 +19,10 @@ public class ActuatorController {
 	@RequestMapping(value = "/hello-actuator", method = RequestMethod.GET)
 	@ResponseBody
 	public Greeting sayHello(@RequestParam(name = "name", required = false, defaultValue = "Stranger") String name) {
-		
 		System.err.println("tesst");
 		System.err.println("tesst");
+		System.err.println("tesst");
+		//fdfdf
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
 
