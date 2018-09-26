@@ -23,6 +23,8 @@ public class ActuatorController {
 		System.err.println("tesst");
 		System.err.println("tesst");
 		//fdfdf
+		
+		//test
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
 
