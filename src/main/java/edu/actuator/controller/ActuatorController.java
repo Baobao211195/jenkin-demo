@@ -25,6 +25,8 @@ public class ActuatorController {
 		//fdfdf
 		
 		//test
+
+		//branch 'master' of https://github.com/phamvanoanh/jenkin-demo.git
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
 
