@@ -27,7 +27,6 @@ node {
     	echo "Display : ${mvnHome}"
     	bat 'echo step1'
         bat '${mvnHome}\\bin\\mvn package'
-	    
      }       
 }
  
