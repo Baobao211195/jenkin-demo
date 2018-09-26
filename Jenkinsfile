@@ -25,15 +25,14 @@ node {
     stage ('Build') {
     	// def MAVEN_HOME = tool name: 'Maven', type: 'maven'
         // bat "${MAVEN_HOME}/bin/mvn clean install"
-         steps {
-             bat 'echo step1'
-             bat 'echo step2'
-             bat '''
-                echo 'Multiline'
-                echo 'Example'
-             '''
-             echo 'not using shell'
-          } 
+	     bat 'echo step1'
+	     bat 'echo step2'
+	     bat '''
+	        echo 'Multiline'
+	        echo 'Example'
+	     '''
+	     echo 'not using shell'
+	  
      }       
 }
  
