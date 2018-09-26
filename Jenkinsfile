@@ -41,8 +41,10 @@ node {
             //archive 'target*//*.jar'
         } else {
             bat(/"${mvnHome}\bin\mvn" -Dintegration-tests.skip=true clean package/)
-            def pom = readMavenPom file: 'pom.xml'
-            print pom.version
+            //def pom = readMavenPom file: 'pom.xml'
+            //print pom.version
+            //def pom = readMavenPom file: 'pom.xml'
+            //print pom.version
             //junit '**//*target/surefire-reports/TEST-*.xml'
             //archive 'target*//*.jar'
     	}       
