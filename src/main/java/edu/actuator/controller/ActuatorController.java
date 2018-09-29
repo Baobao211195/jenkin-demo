@@ -23,6 +23,7 @@ public class ActuatorController {
 		System.err.println("tesst");
 		System.err.println("tesst");
 		System.err.println("tesst");
+
 		//branch 'master' of https://github.com/phamvanoanh/jenkin-demo.git
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
